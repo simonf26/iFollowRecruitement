@@ -29,7 +29,24 @@ $ rosrun map_server map_saver -f ~/map
 
 ###	To Navigate the map you can use: $ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=/map_path/map.yaml
 
-###	The map use for this test is available in Setting folder
+###	The map use for this test is available in the "Setting" folder
+
+#	2. Multiplexer (45-60 minutes)
+Here I started looking into the code of teleop and turlebot_drive and then while looking for a solution online I found that there was a tool already implemented in topic_tools. But it never is a waste of time looking through code to understand how things work! 
+
+To create a multiplexer:
+rosrun topic_tools mux cmd_vel /cmd_local /cmd_web mux:=mux_cmdvel
+
+To switch source to web:
+rosrun topic_tools mux_select  cmd_select /cmd_web
+or to select local source:
+rosrun topic_tools mux_select  cmd_select /cmd_local
+
+#	3.
+
+
+
+
 
 
 
