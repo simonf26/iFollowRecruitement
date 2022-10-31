@@ -45,8 +45,16 @@ rosrun topic_tools mux_select  cmd_select /cmd_web
 or to select local source:
 rosrun topic_tools mux_select  cmd_select /cmd_local
 
-#	3. Teleoperation a distance
-rostopic pub -r 1 /ROS/cmd_web std_msgs/Int32 
+#	3. Teleoperation a distance (180-240 minutes)
+
+A first "ros_node.cpp" node subscribes to a MQTT topic and publishes a speed command on /cmd_web.
+
+As C++ is not meant to interact with the keyboard without a library, it will be simpler to create the non ros client using python.
+
+The python file corresponding is publisher.py
+
+
+ 
 
 
 
