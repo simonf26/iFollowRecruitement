@@ -51,9 +51,13 @@ A first "ros_node.cpp" node subscribes to a MQTT topic and publishes a speed com
 
 As C++ is not meant to interact with the keyboard without a library, it will be simpler to create the non ros client using python.
 
-The python file corresponding is publisher.py
+The python file corresponding is publisher.py. It uses pygame to allow the user to interact with the 
 
+Note that a library can be used to communicate between ROS and MQTT called mqtt_bridge.
 
+# 4. AR Tag command
+
+The tags were not made available so I skipped this question
  
 
 
